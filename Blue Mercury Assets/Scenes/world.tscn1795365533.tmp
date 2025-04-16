@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cmx12h44gsyi6"]
+[gd_scene load_steps=9 format=3 uid="uid://cmx12h44gsyi6"]
 
 [ext_resource type="Script" uid="uid://cwpqjr02yavo" path="res://camera.gd" id="1_4boht"]
 [ext_resource type="PackedScene" uid="uid://bqxf0lbb5tsqk" path="res://Blue Mercury Assets/3D Models/Terrain/testTerrain/testTerrain.blend" id="1_khrda"]
@@ -7,7 +7,6 @@
 [ext_resource type="Material" uid="uid://dri0272g4wxav" path="res://Blue Mercury Assets/3D Models/Terrain/testTerrain/new_standard_material_3d.tres" id="5_ahbt7"]
 [ext_resource type="PackedScene" uid="uid://bchrhsbo7jygw" path="res://Blue Mercury Assets/Scenes/m_60a_1.tscn" id="6_ahbt7"]
 [ext_resource type="Script" uid="uid://dvbohafdhghlj" path="res://Blue Mercury Assets/Scenes/node_3d.gd" id="7_ttupw"]
-[ext_resource type="PackedScene" uid="uid://drfn6fikbwm41" path="res://Blue Mercury Assets/Scenes/waypointMarker.tscn" id="8_3o3it"]
 
 [sub_resource type="Environment" id="Environment_khrda"]
 ambient_light_source = 3
@@ -53,7 +52,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.1096, 0.59992, 28.317)
 [node name="M60A1" parent="." instance=ExtResource("6_ahbt7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.7386, 0.878504, 7.91204)
 
-[node name="WaypointManager" type="Node3D" parent="." node_paths=PackedStringArray("tank_root")]
+[node name="WayPoint Script" type="Node3D" parent="."]
 script = ExtResource("7_ttupw")
-waypoint_marker = ExtResource("8_3o3it")
-tank_root = NodePath("../M60A1")

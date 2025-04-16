@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bqxf0lbb5tsqk"
-path="res://.godot/imported/testTerrain.blend-25c3b2350621bf5c4088145097cad7a7.scn"
+uid="uid://cvjktd2xjlb27"
+path="res://.godot/imported/T-64.blend-5314256128139eb90fc68002d14b61de.scn"
 
 [deps]
 
-source_file="res://Blue Mercury Assets/3D Models/Terrain/testTerrain/testTerrain.blend"
-dest_files=["res://.godot/imported/testTerrain.blend-25c3b2350621bf5c4088145097cad7a7.scn"]
+source_file="res://Blue Mercury Assets/3D Models/Units/T-64/T-64.blend"
+dest_files=["res://.godot/imported/T-64.blend-5314256128139eb90fc68002d14b61de.scn"]
 
 [params]
 
@@ -32,34 +32,22 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={
-"materials": {
-"@MATERIAL:0": {
-"use_external/enabled": true,
-"use_external/path": "uid://dri0272g4wxav"
-}
-},
-"nodes": {
-"PATH:Cube": {
-"generate/physics": true
-}
-}
-}
+_subresources={}
 blender/nodes/visible=0
 blender/nodes/active_collection_only=false
-blender/nodes/punctual_lights=false
+blender/nodes/punctual_lights=true
 blender/nodes/cameras=false
-blender/nodes/custom_properties=false
+blender/nodes/custom_properties=true
 blender/nodes/modifiers=1
 blender/meshes/colors=false
 blender/meshes/uvs=true
 blender/meshes/normals=true
-blender/meshes/export_geometry_nodes_instances=true
+blender/meshes/export_geometry_nodes_instances=false
 blender/meshes/tangents=true
 blender/meshes/skins=2
 blender/meshes/export_bones_deforming_mesh_only=false
 blender/materials/unpack_enabled=true
-blender/materials/export_materials=0
+blender/materials/export_materials=1
 blender/animation/limit_playback=true
 blender/animation/always_sample=true
 blender/animation/group_tracks=true
