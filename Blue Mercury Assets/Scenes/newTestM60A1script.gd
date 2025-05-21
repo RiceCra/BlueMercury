@@ -7,6 +7,7 @@ extends VehicleBody3D
 @export var move_speed: float = 30000.0
 
 enum State { ROTATING, MOVING, IDLE }
+var moveQueue: Array[Vector3] = []
 var current_state: State = State.IDLE
 var left_tracks: Array
 var right_tracks: Array
@@ -18,8 +19,15 @@ func _ready():
 	right_tracks = [$RightWheel1, $RightWheel2, $RightWheel3, $RightWheel4, $RightWheel5, $RightWheel6]
 
 func _physics_process(delta):
+	print(moveQueue)
 	if current_state == State.IDLE:
-		return
+		#brake = 0
+		if moveQueue.is_empty():
+			return
+			
+		print("new node")
+		target_position = moveQueue.pop_front()
+		current_state = State.ROTATING
 	
 	match current_state:
 		State.ROTATING:
@@ -28,15 +36,14 @@ func _physics_process(delta):
 			handle_movement(delta)
 
 func set_target_position(new_target: Vector3):
-	brake = 0
-	target_position = new_target
-	current_state = State.ROTATING
+	moveQueue.append(new_target)
 
 func handle_rotation(delta):
 	var to_target = target_position - global_transform.origin
 	to_target.y = 0  # Ignore vertical difference
 	
 	if to_target.length() < arrival_distance:
+		print("premature rotation")
 		current_state = State.IDLE
 		return
 	
@@ -48,17 +55,18 @@ func handle_rotation(delta):
 	var angle_diff = forward.angle_to(target_dir)
 	var cross = forward.cross(target_dir)
 	
-	print("---")
-	print("Angle difference: ", rad_to_deg(angle_diff))
-	print("Raw Angle: ", angle_diff)
-	print("Rotation Threshhold: ", deg_to_rad(rotation_threshold))
+	#print("---")
+	#print("Angle difference: ", rad_to_deg(angle_diff))
+	#print("Raw Angle: ", angle_diff)
+	#print("Rotation Threshhold: ", deg_to_rad(rotation_threshold))
 	#if angle_diff > deg_to_rad(rotation_threshold):
-	if rad_to_deg(angle_diff) + deg_to_rad(rotation_threshold) <= 180:
+	if rad_to_deg(angle_diff) <= 179:
 		# Determine rotation direction
 		var rotation_direction = sign(cross.y)
 		
 		# Apply differential steering
 		var rotation_force = rotation_speed * delta
+		#print("rotational force: ", rotation_force, ", delta: ", delta)
 		apply_track_forces(rotation_force * rotation_direction, -rotation_force * rotation_direction)
 	else:
 		# Aligned with target, start moving
@@ -86,10 +94,21 @@ func handle_movement(delta):
 	var angle_diff = current_forward.angle_to(target_dir)
 	var cross = current_forward.cross(target_dir)
 	
-	if angle_diff > deg_to_rad(rotation_threshold):
+	#print("Angle Diff: ", rad_to_deg(angle_diff))
+	#print("Rot Thresh: ", rotation_threshold)
+	
+	if rad_to_deg(angle_diff) < 179:
+		#print("Applying force")
+		
+		var rotation_direction = sign(cross.y)
+		var rotation_force = rotation_speed * delta
+		#print("rotational force: ", rotation_force, ", delta: ", delta)
+		apply_track_forces(rotation_force * 0.5 * rotation_direction, -rotation_force * 0.5 * rotation_direction)
+		
+		
 		# Small adjustment while moving
-		var adjustment = move_speed * 0.2 * sign(cross.y) * delta
-		apply_track_forces(forward_speed - adjustment, forward_speed + adjustment)
+		#var adjustment = move_speed * 0.2 * sign(cross.y) * delta
+		#apply_track_forces(forward_speed - adjustment, forward_speed + adjustment)
 
 func apply_track_forces(left_force: float, right_force: float):
 	# Apply forces to all wheels in each track

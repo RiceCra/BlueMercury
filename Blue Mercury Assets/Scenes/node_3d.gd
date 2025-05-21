@@ -33,5 +33,5 @@ func _unhandled_input(event):
 			marker.global_position = result.position
 			
 			# Set tank target
-			tank_body.target_position = result.position
-			tank_body.has_target = true
+			#tank_body.target_position = result.position
+			#tank_body.has_target = true

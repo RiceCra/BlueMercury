@@ -22,73 +22,73 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.152674, 1.14215, 0.0070806
 shape = SubResource("BoxShape3D_1xo3t")
 
 [node name="RightWheel1" type="VehicleWheel3D" parent="VehicleBody3D"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2.23379, 0.548865, -1.40511)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2.23379, 0.548865, -1.76176)
 use_as_traction = true
 wheel_radius = 0.4
 suspension_stiffness = 30.0
 
 [node name="RightWheel2" type="VehicleWheel3D" parent="VehicleBody3D"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.3955, 0.548865, -1.40511)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.3955, 0.548865, -1.76176)
 use_as_traction = true
 wheel_radius = 0.4
 suspension_stiffness = 30.0
 
 [node name="RightWheel3" type="VehicleWheel3D" parent="VehicleBody3D"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.561978, 0.548865, -1.40511)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.561978, 0.548865, -1.76176)
 use_as_traction = true
 wheel_radius = 0.4
 suspension_stiffness = 30.0
 
 [node name="RightWheel4" type="VehicleWheel3D" parent="VehicleBody3D"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.281074, 0.548865, -1.40511)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.281074, 0.548865, -1.76176)
 use_as_traction = true
 wheel_radius = 0.4
 suspension_stiffness = 30.0
 
 [node name="RightWheel5" type="VehicleWheel3D" parent="VehicleBody3D"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.11936, 0.548865, -1.40511)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.11936, 0.548865, -1.76176)
 use_as_traction = true
 wheel_radius = 0.4
 suspension_stiffness = 30.0
 
 [node name="RightWheel6" type="VehicleWheel3D" parent="VehicleBody3D"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.94812, 0.548865, -1.40511)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.94812, 0.548865, -1.76176)
 use_as_traction = true
 wheel_radius = 0.4
 suspension_stiffness = 30.0
 
 [node name="LeftWheel1" type="VehicleWheel3D" parent="VehicleBody3D"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2.23379, 0.548865, 1.42542)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2.23379, 0.548865, 1.7619)
 use_as_traction = true
 wheel_radius = 0.4
 suspension_stiffness = 30.0
 
 [node name="LeftWheel2" type="VehicleWheel3D" parent="VehicleBody3D"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.3955, 0.548865, 1.42542)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.3955, 0.548865, 1.7619)
 use_as_traction = true
 wheel_radius = 0.4
 suspension_stiffness = 30.0
 
 [node name="LeftWheel3" type="VehicleWheel3D" parent="VehicleBody3D"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.561978, 0.548865, 1.42542)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.561978, 0.548865, 1.7619)
 use_as_traction = true
 wheel_radius = 0.4
 suspension_stiffness = 30.0
 
 [node name="LeftWheel4" type="VehicleWheel3D" parent="VehicleBody3D"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.281073, 0.548865, 1.42542)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.281073, 0.548865, 1.7619)
 use_as_traction = true
 wheel_radius = 0.4
 suspension_stiffness = 30.0
 
 [node name="LeftWheel5" type="VehicleWheel3D" parent="VehicleBody3D"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.11936, 0.548865, 1.42542)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.11936, 0.548865, 1.7619)
 use_as_traction = true
 wheel_radius = 0.4
 suspension_stiffness = 30.0
 
 [node name="LeftWheel6" type="VehicleWheel3D" parent="VehicleBody3D"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.94812, 0.548865, 1.42542)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.94812, 0.548865, 1.7619)
 use_as_traction = true
 wheel_radius = 0.4
 suspension_stiffness = 30.0

@@ -16,7 +16,7 @@ ambient_light_color = Color(1, 1, 1, 1)
 [node name="World" type="Node3D"]
 
 [node name="FreeLookCamera" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.3274, 5.37231, 50.5653)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.5189, 8.35419, 18.5905)
 script = ExtResource("1_4boht")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -51,7 +51,7 @@ transform = Transform3D(0.972654, 0, 0.232257, 0, 1, 0, -0.232257, 0, 0.972654, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.1096, 0.59992, 28.317)
 
 [node name="M60A1" parent="." instance=ExtResource("6_ahbt7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.7386, 0.878504, 7.91204)
+transform = Transform3D(0.156297, 0, -0.98771, 0, 1, 0, 0.98771, 0, 0.156297, -31.7386, 0.878504, 7.91204)
 
 [node name="WaypointManager" type="Node3D" parent="." node_paths=PackedStringArray("tank_root")]
 script = ExtResource("7_ttupw")
